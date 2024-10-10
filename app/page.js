@@ -15,26 +15,10 @@ const geistMono = localFont({
 });
 
 export default function Home() {
-
-  const blur = true;
-
-
   return (
 
-        <div 
-          className="pt-[40px] flex justify-end">
-          <div
-            className="min-h-[96px] xl:min-h-[256px] min-w-[736px] p-4 box-content backdrop-blur-md bg-white/5 absolute">
-          </div>
-
-          <div className="z-10 flex flex-row justify-center">
-            <p className="">
-              00 Home
-            </p>
-            <p>
-              01 Destination
-            </p>
-          </div>
+        <div>
+          
         </div>
     
   );

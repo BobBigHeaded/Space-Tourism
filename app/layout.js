@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import clsx from "clsx";
+import Link from "next/link";
 
 export const metadata = {
   title: 'Next.js',
@@ -7,13 +8,53 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
+  const menuStyle = "flex justify-center font-barlowCondensed tracking-[0.125em] font-thin";
+
   return (
-    <html lang="en" className={clsx('bg-cover bg-no-repeat',
+    <html lang="en" className={clsx('min-h-screen bg-right bg-cover bg-no-repeat',
       'bg-[url("/assets/home/background-home-mobile.jpg")]',
       'md:bg-[url("/assets/home/background-home-tablet.jpg")]', 
       'xl:bg-[url("/assets/home/background-home-desktop.jpg")]')}>
+        
       <body>
-        <div>header</div>
+      <div>
+
+        <div 
+        className="invisible md:visible flex justify-end">
+          
+          <div
+            className={clsx('min-h-[96px] min-w-[640px] xl:min-w-[736px]',
+              'box-content backdrop-blur-md bg-white/5 absolute',
+              'grid content-center flex justify-end mt-[40px]')}>
+
+            <div className="z-10 flex flex-row grid grid-cols-4 gap-[48px] px-[64px]">
+
+              <Link href={'/'} className={menuStyle}>
+                <span className='font-semibold'>00</span>&nbsp;HOME
+              </Link>
+
+              <Link href={'/destination'} className={menuStyle}>
+              <span className='font-semibold'>01</span>&nbsp;DESTINATION
+              </Link>
+
+              <Link href={'/crew'} className={menuStyle}>
+              <span className='font-semibold'>02</span>&nbsp;CREW
+              </Link>
+
+              <Link href={'/technology'} className={menuStyle}>
+              <span className='font-semibold'>03</span>&nbsp;TECHNOLOGY
+              </Link>
+
+              </div>
+          </div>
+        </div>
+
+        <div className="ml-[40px] w-[40px] md:w-[48px]">
+        <a href='/'><img src='/assets/shared/logo.svg'></img></a>
+        </div>
+
+      </div>
         {children}
         </body>
     </html>

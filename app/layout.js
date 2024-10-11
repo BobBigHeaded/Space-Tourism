@@ -1,3 +1,4 @@
+import Sidebar from "@/components/Sidebar";
 import "@/styles/globals.css";
 import clsx from "clsx";
 import Link from "next/link";
@@ -9,7 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 
-  const menuStyle = "flex justify-center font-barlowCondensed tracking-[0.125em] font-thin";
+  const menuTextStyle = "flex justify-center font-barlowCondensed tracking-[0.125em] font-thin";
 
   return (
     <html lang="en" className={clsx('min-h-screen bg-right bg-cover bg-no-repeat',
@@ -18,43 +19,42 @@ export default function RootLayout({ children }) {
       'xl:bg-[url("/assets/home/background-home-desktop.jpg")]')}>
         
       <body>
-      <div>
+      <header className="flex flex-row md:justify-between relative w-full max-h-[96px] pl-12 xl:py-12">
+        <div className="min-h-[96px] xl:w-full flex flex-row xl:gap-12 items-center md:pr-12 xl:pr-0">
 
-        <div 
-        className="invisible md:visible flex justify-end">
-          
-          <div
-            className={clsx('min-h-[96px] min-w-[640px] xl:min-w-[736px]',
-              'box-content backdrop-blur-md bg-white/5 absolute',
-              'grid content-center flex justify-end mt-[40px]')}>
+          <a href='/'><img src='/assets/shared/logo.svg' className="min-w-[40px] md:min-w-[48px]"></img></a>
 
-            <div className="z-10 flex flex-row grid grid-cols-4 gap-[48px] px-[64px]">
+          <div className="hidden w-full h-[1px] bg-white/25 flex xl:inline-flex"></div>
 
-              <Link href={'/'} className={menuStyle}>
-                <span className='font-semibold'>00</span>&nbsp;HOME
-              </Link>
-
-              <Link href={'/destination'} className={menuStyle}>
-              <span className='font-semibold'>01</span>&nbsp;DESTINATION
-              </Link>
-
-              <Link href={'/crew'} className={menuStyle}>
-              <span className='font-semibold'>02</span>&nbsp;CREW
-              </Link>
-
-              <Link href={'/technology'} className={menuStyle}>
-              <span className='font-semibold'>03</span>&nbsp;TECHNOLOGY
-              </Link>
-
-              </div>
-          </div>
         </div>
 
-        <div className="ml-[40px] w-[40px] md:w-[48px]">
-        <a href='/'><img src='/assets/shared/logo.svg'></img></a>
+        <div
+          className={clsx('min-h-[96px] w-full xl:max-w-[736px]',
+            'backdrop-blur-xl bg-white/5 flex justify-between xl:justify-end',
+            'items-center gap-12 md:pr-12 md:pl-[80px] xl:px-12 md:inline-flex hidden')}>
+
+            <Link href={'/'} className={menuTextStyle}>
+              <span className='hidden font-semibold flex xl:inline-flex'>00</span>&nbsp;HOME
+            </Link>
+
+            <Link href={'/destination'} className={menuTextStyle}>
+            <span className='font-semibold'>01</span>&nbsp;DESTINATION
+            </Link>
+
+            <Link href={'/crew'} className={menuTextStyle}>
+            <span className='font-semibold'>02</span>&nbsp;CREW
+            </Link>
+
+            <Link href={'/technology'} className={menuTextStyle}>
+            <span className='font-semibold'>03</span>&nbsp;TECHNOLOGY
+            </Link>
+
         </div>
 
-      </div>
+        <div className="block md:hidden flex justify-end items-center">
+          <Sidebar />
+        </div>
+      </header>
         {children}
         </body>
     </html>

@@ -1,3 +1,3 @@
 export default function PlanetPage() {
-    return <div>fjuieosfbesuifbueisbfuesis</div>
+    return <div>page</div>
 }

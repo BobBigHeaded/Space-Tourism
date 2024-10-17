@@ -10,12 +10,6 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 
-  const currentPage = "None"
-  if (typeof window !== "undefined") {
-    const currentPage = window.location.pathname;
-    console.log(currentPage);
-  }
-
   return (
     <html lang="en" className={clsx('h-full bg-right bg-cover bg-no-repeat',
       'bg-[url("/assets/home/background-home-mobile.jpg")]',

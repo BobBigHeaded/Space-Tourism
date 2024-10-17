@@ -1,7 +1,7 @@
 import Sidebar from "@/components/Sidebar";
+import NavigationBar from "@/components/NavigationBar";
 import "@/styles/globals.css";
 import clsx from "clsx";
-import Link from "next/link";
 
 export const metadata = {
   title: 'Next.js',
@@ -10,53 +10,40 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 
-  const menuTextStyle = "flex justify-center font-barlowCondensed tracking-[0.125em] font-thin";
+  const currentPage = "None"
+  if (typeof window !== "undefined") {
+    const currentPage = window.location.pathname;
+    console.log(currentPage);
+  }
 
   return (
-    <html lang="en" className={clsx('min-h-screen bg-right bg-cover bg-no-repeat',
+    <html lang="en" className={clsx('h-full bg-right bg-cover bg-no-repeat',
       'bg-[url("/assets/home/background-home-mobile.jpg")]',
-      'md:bg-[url("/assets/home/background-home-tablet.jpg")]', 
+      'md:bg-[url("/assets/home/background-home-tablet.jpg")]',
       'xl:bg-[url("/assets/home/background-home-desktop.jpg")]')}>
-        
-      <body>
-      <header className="flex flex-row md:justify-between relative w-full max-h-[96px] pl-12 xl:py-12">
-        <div className="min-h-[96px] xl:w-full flex flex-row xl:gap-12 items-center md:pr-12 xl:pr-0">
 
-          <a href='/'><img src='/assets/shared/logo.svg' className="min-w-[40px] md:min-w-[48px]"></img></a>
+      <body className="h-full flex flex-col">
 
-          <div className="hidden w-full h-[1px] bg-white/25 flex xl:inline-flex"></div>
+        <header className="flex flex-row justify-between relative w-full max-h-[96px] pl-[24px] md:pl-12 xl:py-12">
+          <div className="min-h-[96px] xl:w-full flex flex-row xl:gap-12 items-center md:pr-12 xl:pr-0">
 
-        </div>
+            <a href='/'><img src='/assets/shared/logo.svg' className="min-w-[40px] md:min-w-[48px]"></img></a>
 
-        <div
-          className={clsx('min-h-[96px] w-full xl:max-w-[736px]',
-            'backdrop-blur-xl bg-white/5 flex justify-between xl:justify-end',
-            'items-center gap-12 md:pr-12 md:pl-[80px] xl:px-12 md:inline-flex hidden')}>
+            <div className="hidden w-full h-[1px] bg-white/25 flex xl:inline-flex"></div>
 
-            <Link href={'/'} className={menuTextStyle}>
-              <span className='hidden font-semibold flex xl:inline-flex'>00</span>&nbsp;HOME
-            </Link>
+          </div>
 
-            <Link href={'/destination'} className={menuTextStyle}>
-            <span className='font-semibold'>01</span>&nbsp;DESTINATION
-            </Link>
+          <NavigationBar />
 
-            <Link href={'/crew'} className={menuTextStyle}>
-            <span className='font-semibold'>02</span>&nbsp;CREW
-            </Link>
+          <div className="block md:hidden">
+            <Sidebar />
+          </div>
+        </header>
 
-            <Link href={'/technology'} className={menuTextStyle}>
-            <span className='font-semibold'>03</span>&nbsp;TECHNOLOGY
-            </Link>
 
-        </div>
-
-        <div className="block md:hidden flex justify-end items-center">
-          <Sidebar />
-        </div>
-      </header>
         {children}
-        </body>
+
+      </body>
     </html>
   )
 }

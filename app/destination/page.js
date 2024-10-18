@@ -47,6 +47,8 @@ export default function PlanetPage() {
     ]
 
     return (
-        <InfoTabs data={locations}></InfoTabs>
+        <div className="flex-1">
+            <InfoTabs data={locations}></InfoTabs>
+        </div>
     );
 }

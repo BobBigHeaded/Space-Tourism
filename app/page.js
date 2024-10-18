@@ -13,10 +13,16 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export default function Home() {
-  return (
+//   bg-[url("/assets/home/background-home-mobile.jpg
+//   md:bg-[url("/assets/home/background-home-tablet.jpg
+//   xl:bg-[url("/assets/home/background-home-desktop.jpg
 
+
+export default function Home() {
+
+  return (
     <div className="flex-1">
+
       <div className="py-[128px] px-[40px] xl:px-[128px] h-full flex flex-col 
                       xl:flex-row justify-between md:justify-center xl:justify-between items-center
                       xl:items-end">

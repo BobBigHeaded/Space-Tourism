@@ -2,7 +2,6 @@ import Sidebar from "@/components/Sidebar";
 import NavigationBar from "@/components/NavigationBar";
 import BackgroundSelect from "@/components/BackgroundSelect";
 import "@/styles/globals.css";
-import clsx from "clsx";
 
 export const metadata = {
   title: 'Explore Space',

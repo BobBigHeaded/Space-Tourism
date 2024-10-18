@@ -1,6 +1,7 @@
 "use client";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import Head from "next/head";
 
 const BackgroundSelect = ({ children }) => {
     function getBg(currentPage) {
@@ -11,12 +12,12 @@ const BackgroundSelect = ({ children }) => {
     }
 
     return (
-        <html lang="en" className={clsx('h-full bg-right bg-cover bg-no-repeat',
-            usePathname() === "/" ? getBg("home") :
+        <html lang="en" className={clsx('h-full bg-cover bg-no-repeat',
+            usePathname() === "/" ? `${getBg("home")} bg-right` :
                 usePathname() === "/destination" ? getBg("destination") :
                     usePathname() === "/crew" ? getBg("crew") :
-                        usePathname() === "/technology" ? "technology" :
-                            "bg-black",)}>
+                        usePathname() === "/technology" ? getBg("technology") :
+                            "bg-black")}>
 
             {children}
         </html>

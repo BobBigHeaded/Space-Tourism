@@ -27,7 +27,9 @@ const InfoTabs = ({ data }) => {
                     </div>
                     <div className="flex-1 flex justify-center items-center max-w-[800px]">
                         <div className="flex justify-between flex-col gap-y-[38px] mx-[60px]">
+
                             {/* buttons */}
+
                             <div className={clsx("flex flex-row gap-x-[32px] min-w-full font-barlowCondensed text-[18px]",
                                 "tracking-[2px] font-light")}>
 
@@ -61,17 +63,21 @@ const InfoTabs = ({ data }) => {
                             </div>
 
                             {/* name */}
+
                             <p className="font-bellefair text-[100px] text-[#FFFFFF]">
                                 {currentLocation.name}</p>
 
                             {/* desc */}
+
                             <p className="min-w-[420px] font-barlow text-[18px] text-[#D0D6F9] leading-[180%] font-extralight">
                                 {currentLocation.description}</p>
 
                             {/* seperator */}
+
                             <div className="min-w-full min-h-[1px] bg-[#FFFFFF]/20"></div>
 
                             {/* distance and time */}
+
                             <div className="flex flex-row gap-[24px]">
                                 <div className="flex-1">
                                     <p className="font-barlowCondensed text-[14px] text-[#D0D6F9] tracking-[2px] font-thin">

@@ -22,6 +22,18 @@ export default function Home() {
 
   return (
     <div className="flex-1">
+      <Head>
+        <link
+          rel="preload"
+          href="/assets/home/background-home-desktop.jpg"
+          as="desktop background"
+        />
+        <link
+          rel="preload"
+          href="/assets/home/background-home-tablet.jpg"
+          as="tablet background"
+        />
+      </Head>
 
       <div className="py-[128px] px-[40px] xl:px-[128px] h-full flex flex-col 
                       xl:flex-row justify-between md:justify-center xl:justify-between items-center

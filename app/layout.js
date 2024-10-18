@@ -14,7 +14,6 @@ export default function RootLayout({ children }) {
   return (
     <BackgroundSelect>
       <body className="h-full flex flex-col">
-
         <header className="flex flex-row justify-between relative w-full max-h-[96px] pl-[24px] md:pl-12 xl:py-12">
           <div className="min-h-[96px] xl:w-full flex flex-row xl:gap-12 items-center md:pr-12 xl:pr-0">
 

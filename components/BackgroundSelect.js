@@ -6,6 +6,7 @@ import Head from "next/head";
 const BackgroundSelect = ({ children }) => {
     function getBg(currentPage) {
         return (clsx(
+            // change the ${} to just a string this just breaks it
             `bg-[url("/assets/${currentPage}/background-${currentPage}-mobile.jpg")]`,
             `md:bg-[url("/assets/${currentPage}/background-${currentPage}-tablet.jpg")]`,
             `xl:bg-[url("/assets/${currentPage}/background-${currentPage}-desktop.jpg")]`))

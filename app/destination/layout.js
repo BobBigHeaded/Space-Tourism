@@ -1,12 +1,7 @@
 import React from "react";
-import clsx from "clsx";
 
 export default function DestinationLayout({ children }) {
-    return <section>
-        <div>
-            diyawgddiawdawdhaiuwhdi
-        </div>
-
+    return <section className="flex-1">
         {children}
     </section>
 }

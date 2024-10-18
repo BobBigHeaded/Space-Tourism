@@ -5,18 +5,14 @@ import "@/styles/globals.css";
 import clsx from "clsx";
 
 export const metadata = {
-  title: 'Space Tourism',
+  title: 'Explore Space',
   description: 'Plan a trip to space.',
+  icon: '/favicon.ico'
 }
 
 export default function RootLayout({ children }) {
 
   return (
-    // <html lang="en" className={clsx('h-full bg-right bg-cover bg-no-repeat',
-    //   'bg-[url("/assets/home/background-home-mobile.jpg")]',
-    //   'md:bg-[url("/assets/home/background-home-tablet.jpg")]',
-    //   'xl:bg-[url("/assets/home/background-home-desktop.jpg")]')}>
-
     <BackgroundSelect>
       <body className="h-full flex flex-col">
 
@@ -41,6 +37,5 @@ export default function RootLayout({ children }) {
 
       </body>
     </BackgroundSelect>
-    // </html>
   )
 }

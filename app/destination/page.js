@@ -3,6 +3,7 @@ import InfoTabs from "@/components/InfoTabs"
 export default function PlanetPage() {
     const locations = [
         {
+            "index": 0,
             "name": "MOON",
             "description": `See our planet as you've never seen it before.
              A perfect relaxing trip away to help regain perspective and come
@@ -13,6 +14,7 @@ export default function PlanetPage() {
             "image": "/assets/destination/image-moon.png"
         },
         {
+            "index": 1,
             "name": "MARS",
             "description": `Don't forget to pack your hiking boots. You'll
              need them to tackle Olympus Mons, the tallest planetary mountain
@@ -22,6 +24,7 @@ export default function PlanetPage() {
             "image": "/assets/destination/image-mars.png"
         },
         {
+            "index": 2,
             "name": "EUROPA",
             "description": `The smallest of the four Galilean moons orbiting Jupiter,
              Europa is a winter lover's dream. With an icy surface, it's perfect for
@@ -32,6 +35,7 @@ export default function PlanetPage() {
             "image": "/assets/destination/image-europa.png"
         },
         {
+            "index": 3,
             "name": "TITAN",
             "description": `The only moon known to have a dense atmosphere other than
              Earth, Titan is a home away from home (just a few hundred degrees colder!).
@@ -42,5 +46,7 @@ export default function PlanetPage() {
         }
     ]
 
-    return <InfoTabs></InfoTabs>
+    return (
+        <InfoTabs data={locations}></InfoTabs>
+    );
 }

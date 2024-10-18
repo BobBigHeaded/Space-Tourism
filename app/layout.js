@@ -1,5 +1,6 @@
 import Sidebar from "@/components/Sidebar";
 import NavigationBar from "@/components/NavigationBar";
+import BackgroundSelect from "@/components/BackgroundSelect";
 import "@/styles/globals.css";
 import clsx from "clsx";
 
@@ -11,11 +12,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
 
   return (
-    <html lang="en" className={clsx('h-full bg-right bg-cover bg-no-repeat',
-      'bg-[url("/assets/home/background-home-mobile.jpg")]',
-      'md:bg-[url("/assets/home/background-home-tablet.jpg")]',
-      'xl:bg-[url("/assets/home/background-home-desktop.jpg")]')}>
+    // <html lang="en" className={clsx('h-full bg-right bg-cover bg-no-repeat',
+    //   'bg-[url("/assets/home/background-home-mobile.jpg")]',
+    //   'md:bg-[url("/assets/home/background-home-tablet.jpg")]',
+    //   'xl:bg-[url("/assets/home/background-home-desktop.jpg")]')}>
 
+    <BackgroundSelect>
       <body className="h-full flex flex-col">
 
         <header className="flex flex-row justify-between relative w-full max-h-[96px] pl-[24px] md:pl-12 xl:py-12">
@@ -38,6 +40,7 @@ export default function RootLayout({ children }) {
         {children}
 
       </body>
-    </html>
+    </BackgroundSelect>
+    // </html>
   )
 }

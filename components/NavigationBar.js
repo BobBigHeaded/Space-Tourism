@@ -1,7 +1,6 @@
 "use client";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-import Link from "next/link";
 
 const NavigationBar = () => {
 
@@ -13,7 +12,7 @@ const NavigationBar = () => {
                 'backdrop-blur-xl bg-white/5 flex justify-between xl:justify-end',
                 'items-center gap-12 md:pr-12 md:pl-[80px] xl:px-12 md:inline-flex hidden')}>
 
-            <Link href={'/'} className="flex group">
+            <a href={'/'} className="flex group">
                 <div className="min-h-[96px] flex flex-col justify-between">
                     <div></div>
                     <p className={menuTextStyle}>
@@ -23,9 +22,9 @@ const NavigationBar = () => {
                         usePathname() === "/" ? "bg-[#FFFFFF]" : "group-hover:bg-[#FFFFFF]/40")}>
                     </div>
                 </div>
-            </Link>
+            </a>
 
-            <Link href={'/destination'} className="flex group">
+            <a href={'/destination'} className="flex group">
                 <div className="min-h-[96px] flex flex-col justify-between">
                     <div></div>
                     <p className={menuTextStyle}>
@@ -35,9 +34,9 @@ const NavigationBar = () => {
                         usePathname() === "/destination" ? "bg-[#FFFFFF]" : "group-hover:bg-[#FFFFFF]/40")}>
                     </div>
                 </div>
-            </Link>
+            </a>
 
-            <Link href={'/crew'} className="flex group">
+            <a href={'/crew'} className="flex group">
                 <div className="min-h-[96px] flex flex-col justify-between">
                     <div></div>
                     <p className={menuTextStyle}>
@@ -47,9 +46,9 @@ const NavigationBar = () => {
                         usePathname() === "/crew" ? "bg-[#FFFFFF]" : "group-hover:bg-[#FFFFFF]/40")}>
                     </div>
                 </div>
-            </Link>
+            </a>
 
-            <Link href={'/technology'} className="flex group">
+            <a href={'/technology'} className="flex group">
                 <div className="min-h-[96px] flex flex-col justify-between">
                     <div></div>
                     <p className={menuTextStyle}>
@@ -59,7 +58,7 @@ const NavigationBar = () => {
                         usePathname() === "/technology" ? "bg-[#FFFFFF]" : "group-hover:bg-[#FFFFFF]/40")}>
                     </div>
                 </div>
-            </Link>
+            </a>
 
         </div>
     );

@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-import Link from "next/link";
 
 const Sidebar = () => {
 
@@ -29,7 +28,7 @@ const Sidebar = () => {
                     isOpen ? 'w-[400px]' : 'w-0')}>
 
                     <div className="flex flex-col pl-[32px]">
-                        <Link className="group mt-[133px] flex flex-row justify-between min-w-[222px]"
+                        <a className="group mt-[133px] flex flex-row justify-between min-w-[222px]"
                             href="/">
                             <p className={menuTextStyle}>
                                 <span className='font-semibold'>00</span>&nbsp; HOME
@@ -38,8 +37,8 @@ const Sidebar = () => {
                             <div className={clsx("transition-all min-h-full min-w-[3px]",
                                 usePathname() === "/" ? "bg-[#FFFFFF]" : "group-hover:bg-[#FFFFFF]/40"
                             )}></div>
-                        </Link>
-                        <Link className="group mt-[32px] flex flex-row justify-between min-w-[222px]"
+                        </a>
+                        <a className="group mt-[32px] flex flex-row justify-between min-w-[222px]"
                             href="/destination">
                             <p className={menuTextStyle}>
                                 <span className='font-semibold'>01</span>&nbsp; DESTINATION
@@ -48,8 +47,8 @@ const Sidebar = () => {
                             <div className={clsx("transition-all min-h-full min-w-[3px]",
                                 usePathname() === "/destination" ? "bg-[#FFFFFF]" : "group-hover:bg-[#FFFFFF]/40"
                             )}></div>
-                        </Link>
-                        <Link className="group mt-[32px] flex flex-row justify-between min-w-[222px]"
+                        </a>
+                        <a className="group mt-[32px] flex flex-row justify-between min-w-[222px]"
                             href="/crew">
                             <p className={menuTextStyle}>
                                 <span className='font-semibold'>02</span>&nbsp; CREW
@@ -58,8 +57,8 @@ const Sidebar = () => {
                             <div className={clsx("transition-all min-h-full min-w-[3px]",
                                 usePathname() === "/crew" ? "bg-[#FFFFFF]" : "group-hover:bg-[#FFFFFF]/40"
                             )}></div>
-                        </Link>
-                        <Link className="group mt-[32px] flex flex-row justify-between min-w-[222px]"
+                        </a>
+                        <a className="group mt-[32px] flex flex-row justify-between min-w-[222px]"
                             href="/technology">
                             <p className={menuTextStyle}>
                                 <span className='font-semibold'>03</span>&nbsp; TECHNOLOGY
@@ -68,7 +67,7 @@ const Sidebar = () => {
                             <div className={clsx("transition-all min-h-full min-w-[3px]",
                                 usePathname() === "/technology" ? "bg-[#FFFFFF]" : "group-hover:bg-[#FFFFFF]/40"
                             )}></div>
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>

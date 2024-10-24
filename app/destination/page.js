@@ -61,7 +61,7 @@ export default function PlanetPage() {
 
                 <div className="flex-1 my-[40px] mx-[165px] flex flex-col">
 
-                    <div className="flex justify-center flex-row gap-[24px] font-barlowCondensed text-[20px] xl:text-[30px] pb-[20px]">
+                    <div className="flex justify-center md:justify-start flex-row gap-[24px] font-barlowCondensed text-[20px] xl:text-[30px] pb-[20px]">
 
                         <p className="font-semibold text-[#FFFFFF]/25">0 1</p>
                         <p className="font-light text-[#FFFFFF] tracking-[4px]">PICK YOUR DESTINATION</p>

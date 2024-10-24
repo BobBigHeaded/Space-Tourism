@@ -1,5 +1,4 @@
 import localFont from "next/font/local";
-import Head from "next/head";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -21,18 +20,6 @@ export default function Home() {
 
   return (
     <div className="flex-1">
-      <Head>
-        <link
-          rel="preload"
-          href="/assets/home/background-home-desktop.jpg"
-          as="desktop background"
-        />
-        <link
-          rel="preload"
-          href="/assets/home/background-home-tablet.jpg"
-          as="tablet background"
-        />
-      </Head>
 
       <div className="py-[128px] px-[40px] xl:px-[128px] h-full flex flex-col 
                       xl:flex-row justify-between md:justify-center xl:justify-between items-center
@@ -55,7 +42,7 @@ export default function Home() {
             to outer space and not hover kind of on the edge of it. Well sit back,
             and relax because we'll give you a truly out of this world experience!</p>
         </div>
-        <div className="py-[160px] md:py-[120px] xl:py-[24px]">
+        <div className="pt-[160px] md:py-[120px] xl:py-[24px]">
           <a className="transition-all min-h-[240px] min-w-[240px] md:min-h-[272px] md:min-w-[272px] bg-[#FFFFFF] rounded-full 
                       flex items-center justify-center font-bellefair
                       text-[32px] text-[#0B0D17] ring-[#FFFFFF]/10 ring ring-0 

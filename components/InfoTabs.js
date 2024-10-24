@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { useState } from "react";
 
 
-const InfoTabs = ({ data }) => {
+const InfoTabs = ({ data }, { children }) => {
 
     const [index, setIndex] = useState(0);
     const currentLocation = data.find(location => location.index === index)
@@ -95,9 +95,10 @@ const InfoTabs = ({ data }) => {
                         </div>
                     </div>
                 </div>
-
+                {children}
             </div>
         </div>
+
     )
 };
 

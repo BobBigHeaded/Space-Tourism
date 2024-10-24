@@ -52,10 +52,6 @@ export default function PlanetPage() {
     const currentLocation = locations.find(location => location.index === index)
 
     return (
-        // <div className="flex-1">
-        //     <InfoTabs data={locations}></InfoTabs>
-        // </div>
-
         <div className="flex-1">
             <div className="flex min-w-full min-h-full pt-[48px] justify-center">
 

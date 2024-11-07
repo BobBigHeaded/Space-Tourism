@@ -1,21 +1,3 @@
-import localFont from "next/font/local";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
-//   bg-[url("/assets/home/background-home-mobile.jpg
-//   md:bg-[url("/assets/home/background-home-tablet.jpg
-//   xl:bg-[url("/assets/home/background-home-desktop.jpg
-
-
 export default function Home() {
 
   return (
@@ -38,9 +20,9 @@ export default function Home() {
           <p className="font-barlow text-[24px] md:text-[20px] text-[#D0D6F9] leading-[180%] 
                         font-thin text-center xl:text-start
                         w-[500px] md:w-[580px] xl:w-[590px]">
-            Let's face it; if you want to go to space, you might as well genuinely go
+            Let&apos;s face it; if you want to go to space, you might as well genuinely go
             to outer space and not hover kind of on the edge of it. Well sit back,
-            and relax because we'll give you a truly out of this world experience!</p>
+            and relax because we&apos;ll give you a truly out of this world experience!</p>
         </div>
         <div className="pt-[160px] md:py-[120px] xl:py-[24px]">
           <a className="transition-all min-h-[240px] min-w-[240px] md:min-h-[272px] md:min-w-[272px] bg-[#FFFFFF] rounded-full 

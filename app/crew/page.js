@@ -1,4 +1,5 @@
 "use client"
+import clsx from "clsx";
 import { useState } from "react";
 
 export default function crew() {
@@ -47,26 +48,53 @@ export default function crew() {
     const currentMember = crewMember.find(location => location.index === index)
 
     return (
-        <div className="flex flex-1 py-[96px] mx-[165px] justify-center flex-col">
-            <div className="flex flex-row gap-[24px] h-[65px] text-[28px] items-start">
+        <div className="flex flex-1 xl:my-[96px] mt-[40px] mb-[0px] mx-[0px] xl:mx-[165px] justify-center flex-col">
+            <div className="flex flex-row gap-[24px] h-[65px] text-[28px] items-start justify-center md:justify-start mx-[40px] xl:mx-0">
                 <p className="font-barlowCondensed font-semibold text-[#FFFFFF]/25">0 2</p>
                 <p className="font-barlowCondensed tracking-[4px] font-light"> MEET YOUR CREW</p>
             </div>
-            <div className="flex flex-1 flex-row gap-[32px]">
-                <div className="flex flex-1 flex-col">
-                    <div className="flex-1 flex justify-center flex-col">
-                        <p className="text-[32px] font-bellefair text-[#FFFFFF]/50">{currentMember.position}</p>
-                        <p className="text-[56px] font-bellefair text-[#FFFFFF]">{currentMember.name}</p>
-                        <p className="pt-[24px] text-[18px] font-barlow text-[#D0D6F9] leading-[180%] font-extralight">{currentMember.description}</p>
+            <div className="flex max-h-full xl:min-w-[1100px] flex-col xl:flex-row gap-[32px]">
+                <div className="flex flex-1 flex-col items-center xl:items-start h-[500px]">
+                    <div className="flex-1 flex flex-col w-[560px] text-center xl:text-left justify-center">
+                        <p className="text-[28px] md:text-[32px] font-bellefair text-[#FFFFFF]/50">{currentMember.position}</p>
+                        <p className="text-[40px] md:text-[56px] font-bellefair text-[#FFFFFF]">{currentMember.name}</p>
+                        <p className={clsx("pt-[24px] text-[18px] font-barlow text-[#D0D6F9] leading-[180%]",
+                            "font-extralight md:w-[560px]")}>{currentMember.description}</p>
                     </div>
 
-                    <div className="h-[63px]">
-
+                    <div className="flex mt-[140px] md:mt-[80px]">
+                        <div className="flex flex-row gap-[40px] justify-center xl:justify-start w-full">
+                            <button onClick={() => setIndex(0)}>
+                                <div className={clsx("transition-all h-[15px] w-[15px] rounded-full",
+                                    index === 0 ? "bg-white" : "bg-white/20 hover:bg-white/50"
+                                )}>
+                                </div>
+                            </button>
+                            <button onClick={() => setIndex(1)}>
+                                <div className={clsx("transition-all h-[15px] w-[15px] rounded-full",
+                                    index === 1 ? "bg-white" : "bg-white/20 hover:bg-white/50"
+                                )}>
+                                </div>
+                            </button>
+                            <button onClick={() => setIndex(2)}>
+                                <div className={clsx("transition-all h-[15px] w-[15px] rounded-full",
+                                    index === 2 ? "bg-white" : "bg-white/20 hover:bg-white/50"
+                                )}>
+                                </div>
+                            </button>
+                            <button onClick={() => setIndex(3)}>
+                                <div className={clsx("transition-all h-[15px] w-[15px] rounded-full",
+                                    index === 3 ? "bg-white" : "bg-white/20 hover:bg-white/50"
+                                )}>
+                                </div>
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div className={"relative flex flex-1 justify-center items-center overflow-hidden"}>
-                    <img className="flex-1" src={currentMember.image}></img>
-                    <div className="absolute inset-0 bg-gradient-to-t from-transparent overflow-hidden from-2%"></div>
+                <div>
+                    <div className="flex-1 flex justify-center">
+                        <img className="w-[32rem] xl:w-[38rem]" src={currentMember.image}></img>
+                    </div>
                 </div>
             </div>
         </div>

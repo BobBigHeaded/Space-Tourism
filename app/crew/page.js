@@ -2,7 +2,7 @@
 import clsx from "clsx";
 import { useState } from "react";
 
-export default function crew() {
+export default function Crew() {
     const crewMember = [{
         "index": 0,
         "position": "COMMANDER",
@@ -49,42 +49,42 @@ export default function crew() {
 
     return (
         <div className="flex flex-1 xl:my-[96px] mt-[40px] mb-[0px] mx-[0px] xl:mx-[165px] justify-center flex-col">
-            <div className="flex flex-row gap-[24px] h-[65px] text-[28px] items-start justify-center md:justify-start mx-[40px] xl:mx-0">
+            <div className="flex flex-row gap-[24px] text-[28px] items-start justify-center md:justify-start mx-[40px] xl:mx-0 mb-[28px]">
                 <p className="font-barlowCondensed font-semibold text-[#FFFFFF]/25">0 2</p>
                 <p className="font-barlowCondensed tracking-[4px] font-light"> MEET YOUR CREW</p>
             </div>
             <div className="flex max-h-full xl:min-w-[1100px] flex-col xl:flex-row gap-[32px]">
-                <div className="flex flex-1 flex-col items-center xl:items-start h-[500px]">
-                    <div className="flex-1 flex flex-col w-[560px] text-center xl:text-left justify-center">
+                <div className="flex flex-1 flex-col items-center xl:items-start">
+                    <div className="flex-1 flex flex-col w-[560px] text-center xl:text-left justify-center min-h-[348px] xl:min-h-[592px]">
                         <p className="text-[28px] md:text-[32px] font-bellefair text-[#FFFFFF]/50">{currentMember.position}</p>
                         <p className="text-[40px] md:text-[56px] font-bellefair text-[#FFFFFF]">{currentMember.name}</p>
                         <p className={clsx("pt-[24px] text-[18px] font-barlow text-[#D0D6F9] leading-[180%]",
                             "font-extralight md:w-[560px]")}>{currentMember.description}</p>
                     </div>
 
-                    <div className="flex mt-[140px] md:mt-[80px]">
+                    <div className="flex mt-[140px] md:mt-[25px]">
                         <div className="flex flex-row gap-[40px] justify-center xl:justify-start w-full">
                             <button onClick={() => setIndex(0)}>
                                 <div className={clsx("transition-all h-[15px] w-[15px] rounded-full",
-                                    index === 0 ? "bg-white" : "bg-white/20 hover:bg-white/50"
+                                    index === 0 ? "bg-white" : "bg-white/[17.5%] hover:bg-white/50"
                                 )}>
                                 </div>
                             </button>
                             <button onClick={() => setIndex(1)}>
                                 <div className={clsx("transition-all h-[15px] w-[15px] rounded-full",
-                                    index === 1 ? "bg-white" : "bg-white/20 hover:bg-white/50"
+                                    index === 1 ? "bg-white" : "bg-white/[17.5%] hover:bg-white/50"
                                 )}>
                                 </div>
                             </button>
                             <button onClick={() => setIndex(2)}>
                                 <div className={clsx("transition-all h-[15px] w-[15px] rounded-full",
-                                    index === 2 ? "bg-white" : "bg-white/20 hover:bg-white/50"
+                                    index === 2 ? "bg-white" : "bg-white/[17.5%] hover:bg-white/50"
                                 )}>
                                 </div>
                             </button>
                             <button onClick={() => setIndex(3)}>
                                 <div className={clsx("transition-all h-[15px] w-[15px] rounded-full",
-                                    index === 3 ? "bg-white" : "bg-white/20 hover:bg-white/50"
+                                    index === 3 ? "bg-white" : "bg-white/[17.5%] hover:bg-white/50"
                                 )}>
                                 </div>
                             </button>

@@ -2,7 +2,7 @@
 import clsx from "clsx";
 import { useState } from "react";
 
-export default function technology() {
+export default function Technology() {
     const technology = [{
         "index": 0,
         "name": "LAUNCH VEHICLE",
@@ -72,9 +72,9 @@ export default function technology() {
                             </div>
                         </button>
                     </div>
-                    <div className="text-center xl:text-left mx-[24px] md:mx-[128px] xl:mx-0">
-                        <p className="font-bellefair text-[32px] text-white/25">THE TERMINOLOGY...</p>
-                        <p className="font-bellefair text-[56px] text-[#FFFFFF]">{currentTech.name}</p>
+                    <div className="text-center xl:text-left mx-[24px] md:mx-[128px] xl:mx-0 min-w-[475px]">
+                        <p className="font-bellefair text-[24px] md:text-[32px] text-white/25">THE TERMINOLOGY...</p>
+                        <p className="font-bellefair text-[40px] md:text-[56px] text-[#FFFFFF]">{currentTech.name}</p>
                         <p className="font-barlow text-[18px] leading-[180%] font-thin text-[#D0D6F9]">{currentTech.description}</p>
                     </div>
                 </div>
